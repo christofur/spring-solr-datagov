@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface IService <T extends IEntity> {
 
+    T findById(String id);
     List<T> findAll();
 }
