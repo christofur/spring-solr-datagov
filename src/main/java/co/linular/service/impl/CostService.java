@@ -36,6 +36,11 @@ public class CostService extends AbstractService<Cost> {
         costRepository.save(resource);
     }
 
+    @Override
+    public void delete(String id){
+        costRepository.delete(id);
+    }
+
     @Autowired
     public void setCostRepository(CostRepository costRepository) {
         this.costRepository = costRepository;

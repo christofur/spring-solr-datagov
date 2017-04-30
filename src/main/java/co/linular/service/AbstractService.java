@@ -39,7 +39,7 @@ public abstract class AbstractService<T extends IEntity> implements IService<T> 
 
     }
 
-    public void delete(long id) {
+    public void delete(String id) {
 
     }
 

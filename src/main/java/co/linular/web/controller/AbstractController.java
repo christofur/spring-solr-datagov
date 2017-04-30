@@ -8,13 +8,15 @@ public abstract class AbstractController<T extends IEntity> {
     public abstract IService getService();
 
     public void createInternal(T resource){
-        IService service = getService();
-        service.create(resource);
+        getService().create(resource);
     }
 
     public void updateInternal(T resource){
-        IService service = getService();
-        service.update(resource);
+        getService().update(resource);
+    }
+
+    public void deleteInternal(String id){
+        getService().delete(id);
     }
 
 }

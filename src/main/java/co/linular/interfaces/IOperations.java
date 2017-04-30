@@ -39,7 +39,7 @@ public interface IOperations<T extends Serializable> {
 
     // delete
 
-    void delete(final long id);
+    void delete(final String id);
 
     void deleteAll();
 
