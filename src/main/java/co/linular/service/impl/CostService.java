@@ -1,5 +1,4 @@
 package co.linular.service.impl;
-
 import co.linular.persistence.model.impl.Cost;
 import co.linular.repository.CostRepository;
 import co.linular.service.AbstractService;
@@ -15,7 +14,7 @@ public class CostService extends AbstractService<Cost> {
     private CostRepository costRepository;
 
     @Override
-    public Cost findById(String id) {
+    public Cost findOne(String id) {
         return costRepository.findOne(id);
     }
 
@@ -24,6 +23,17 @@ public class CostService extends AbstractService<Cost> {
         List<Cost> target = new ArrayList<>();
         costRepository.findAll().forEach(target::add);
         return target;
+    }
+
+    @Override
+    public Cost create(Cost resource) {
+        costRepository.save(resource);
+        return resource;
+    }
+
+    @Override
+    public void update(Cost resource){
+        costRepository.save(resource);
     }
 
     @Autowired
