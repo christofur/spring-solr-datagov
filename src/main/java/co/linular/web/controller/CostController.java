@@ -20,7 +20,6 @@ public class CostController extends AbstractController {
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
-    @Secured("CAN_READ")
     public List<Cost> findAll(){
         return costService.findAll();
     }

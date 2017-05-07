@@ -27,18 +27,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
-        // @formatter:off
-        http.
-                authorizeRequests().
-                // antMatchers("/api/**").      // if you want a more explicit mapping here
-                // regexMatchers("^/login.*").  // use regular expression to match request path
-                anyRequest().
-                authenticated().
-                and().
-                httpBasic().and().
-                sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().
-                csrf().disable();
-        // @formatter:on
+//        // @formatter:off
+//        http.
+//                authorizeRequests().
+//                // antMatchers("/api/**").      // if you want a more explicit mapping here
+//                // regexMatchers("^/login.*").  // use regular expression to match request path
+//                anyRequest().
+//                authenticated().
+//                and().
+//                httpBasic().and().
+//                sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().
+//                csrf().disable();
+//        // @formatter:on
     }
 
 
